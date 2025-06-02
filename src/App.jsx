@@ -8,7 +8,7 @@ function App() {
       <div className="h-screen flex items-center flex-col">
         <img className='rounded-lg' src={logo} alt="Logo Honda" />
         <p className='uppercase mb-6 font-mono text-2xl'>pilot 2020</p>
-        <img className='rounded-lg' src={honda} alt="Honda Pilot 2020" />
+        <img className='rounded-lg object-contain' src={honda} alt="Honda Pilot 2020" />
         <div className='mt-6 px-8 w-full flex justify-around'>
           <ul className='leading-8 sm:w-1/2 px-3'>
             <li className='break-words'>Sistema de Mitigación de Colisión con Frenado (CMBS™) + Sistema de Alerta de Frenado por Colisión Frontal (FCW)</li>
