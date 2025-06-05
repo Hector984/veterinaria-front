@@ -1,15 +1,9 @@
 import logo from "./../assets/logo.svg";
-import { use, useState } from "react";
 
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+const NavBar = ({openAside, open}) => {
 
   return (
-    <header className="bg-gray-600 flex justify-between items-center">
+    <header className="bg-gray-600 flex justify-between items-center sticky top-0">
       <div className="flex items-center justify-between px-4">
         <div className="flex items-center">
           <img src={logo} alt="Logo veterinaria" className="h-20" />
@@ -18,7 +12,7 @@ const NavBar = () => {
 
         <div>
           <button
-            onClick={handleClick}
+            onClick={() => openAside()}
             type="button"
             className="text-white block hover:cursor-pointer sm:hidden"
           >
@@ -30,7 +24,7 @@ const NavBar = () => {
               stroke="currentColor"
               className="size-6"
             >
-              {!isOpen ? (
+              {!open ? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -48,13 +42,13 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className={`${isOpen ? "block" : "hidden"} px-6 pb-4 sm:pb-0 sm:block`}>
+      {/* <div className={`${open ? "block" : "hidden"} px-6 pb-4 sm:pb-0 sm:block`}>
         <a href="#" className="block px-2 rounded hover:bg-gray-500 hover:text-white sm:inline">Inicio</a>
         <a href="#" className="block px-2 rounded hover:bg-gray-500 hover:text-white sm:inline">Pacientes</a>
         <a href="#" className="block px-2 rounded hover:bg-gray-500 hover:text-white sm:inline">Calendario</a>
         <a href="#" className="block px-2 rounded hover:bg-gray-500 hover:text-white sm:inline">Ajustes</a>
         <a href="#" className="block px-2 rounded hover:bg-gray-500 hover:text-white sm:inline">Salir</a>
-      </div>
+      </div> */}
     </header>
   );
 };
