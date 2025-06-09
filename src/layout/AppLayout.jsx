@@ -12,8 +12,12 @@ const AppLayout = () => {
 
     return (
         <>
-            <NavBar openAside={handleOpen} open={isOpen} />
             <Aside open={isOpen} />
+            
+            <div className={`${isOpen ? 'ml-[255px]' : 'sm:ml-72'}`}>
+                <NavBar openAside={handleOpen} open={isOpen} />
+            </div>
+
         </>
     );
 }

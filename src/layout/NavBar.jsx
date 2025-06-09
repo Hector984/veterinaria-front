@@ -1,20 +1,15 @@
-import logo from "./../assets/logo.svg";
+import Notification from "../assets/icons/Notification";
 
 const NavBar = ({openAside, open}) => {
 
   return (
-    <header className="bg-gray-600 flex justify-between items-center sticky top-0">
-      <div className="flex items-center justify-between px-4">
-        <div className="flex items-center">
-          <img src={logo} alt="Logo veterinaria" className="h-20" />
-          <h4 className="text-white">Pet Care</h4>
-        </div>
-
+    <header className="bg-gray-50 flex justify-between items-center sticky top-0 px-4 py-10">
+      <div className="flex items-center justify-between ">
         <div>
           <button
             onClick={() => openAside()}
             type="button"
-            className="text-white block hover:cursor-pointer sm:hidden"
+            className="block hover:cursor-pointer sm:hidden"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +36,7 @@ const NavBar = ({openAside, open}) => {
           </button>
         </div>
       </div>
+      <Notification />
 
       {/* <div className={`${open ? "block" : "hidden"} px-6 pb-4 sm:pb-0 sm:block`}>
         <a href="#" className="block px-2 rounded hover:bg-gray-500 hover:text-white sm:inline">Inicio</a>
